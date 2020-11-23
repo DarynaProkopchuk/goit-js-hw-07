@@ -16,13 +16,6 @@ const images = [
     },
   ];
 
-  const galleryRef = document.querySelector("#gallery");
-
-  const galleryImage = () =>
-    images.reduce((value, image) => {
-      return (
-        value +
-        `<li class = "gallery_item"> <img class = "gallery_item-image" src ="${image.url}" alt = "${image.alt}"</li>`
-      );
-    }, "");
-  galleryRef.insertAdjacentHTML("afterbegin", galleryImage());
+gallery.insertAdjacentHTML("afterbegin", images.map(({ url, alt }) =>
+`<li><img height="120" src="${url}" alt="${alt}"></li>`).join(''));
+gallery.classList.add("gallery");
