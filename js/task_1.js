@@ -1,3 +1,5 @@
+"use strict";
+
 
 const numberOfCategories = document.querySelectorAll(".item");
 console.log(`В списке ${numberOfCategories.length} категории`);
